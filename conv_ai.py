@@ -5,7 +5,7 @@ load_dotenv()
 
 llm=ChatGroq(model="llama-3.3-70b-versatile")
 
-sys_message=SystemMessage(content="You are a helpful pro hindu assistant")
+sys_message=SystemMessage(content="You are a helpful assistant")
 chat_history=[]
 while(True):
     query=input("User: ")
@@ -19,4 +19,5 @@ while(True):
     chat_history.append(AIMessage(content=result.content))
 
 print("\n -----------------------------------------Message History--------------------")
+
 print(chat_history)
